@@ -1,0 +1,34 @@
+[
+  {
+    "id": "coffee-espresso",
+    "name": "Espresso",
+    "description": "Double shot, single origin Ethiopian, pulled fresh.",
+    "price": 3.50,
+    "in_stock": true,
+    "category": "coffee"
+  },
+  {
+    "id": "coffee-latte",
+    "name": "Vanilla Latte",
+    "description": "Whole milk, house vanilla syrup, 12oz.",
+    "price": 5.00,
+    "in_stock": true,
+    "category": "coffee"
+  },
+  {
+    "id": "pastry-croissant",
+    "name": "Butter Croissant",
+    "description": "Flaky, baked this morning. Classic French butter.",
+    "price": 3.25,
+    "in_stock": true,
+    "category": "pastry"
+  },
+  {
+    "id": "sandwich-turkey",
+    "name": "Turkey & Brie Sandwich",
+    "description": "Roast turkey, brie, cranberry, arugula, baguette.",
+    "price": 9.50,
+    "in_stock": true,
+    "category": "sandwich"
+  }
+]
