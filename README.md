@@ -1,15 +1,17 @@
-# Telegram Order Bot — LITE (Python, aiogram 3)
+# Telegram Order Bot — single-file aiogram 3 shop template (Python, MIT)
 
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![aiogram](https://img.shields.io/badge/aiogram-3.4-blue.svg)](https://docs.aiogram.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/daillyteen3056-rgb/telegram-order-bot-lite?style=social)](https://github.com/daillyteen3056-rgb/telegram-order-bot-lite/stargazers)
 
-An open-source Telegram ecommerce bot template that walks a customer from product catalog → cart → FSM checkout, in modern Python (`aiogram 3`). Built for small shops, Fiverr templates, and anyone who wants a readable starting point for a production order bot.
+A tiny, readable **Telegram shop bot** in modern Python (`aiogram 3`): product catalog → cart → FSM checkout, in one file. Built for small shops, Fiverr builds, and anyone who wants a clean starting point for a production order bot — not a 3000-LOC framework.
 
-Free, MIT, hack away.
+> ⭐ **If this saves you an afternoon, star it** — it helps other devs find the repo on `topic:aiogram-3`.
 
-**Live demo:** [@quickorder_myshop_bot](https://t.me/quickorder_myshop_bot) — `/start`
-**Write-up / architecture notes:** [Hashnode article](https://shippingpython.hashnode.dev/how-i-packaged-6-fiverr-telegram-bot-gigs-into-one-aiogram-3-template)
+**Live demo bot:** [@quickorder_myshop_bot](https://t.me/quickorder_myshop_bot) — send `/start`
+**Landing page:** [telegramorder-bot.netlify.app](https://telegramorder-bot.netlify.app/?utm_source=github&utm_medium=readme&utm_campaign=lite_homepage)
+**Architecture write-up:** [Hashnode article](https://shippingpython.hashnode.dev/how-i-packaged-6-fiverr-telegram-bot-gigs-into-one-aiogram-3-template)
 
 ---
 
