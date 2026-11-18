@@ -27,6 +27,7 @@ from typing import Any
 from aiogram import Bot, Dispatcher, F, Router
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
+from aiogram.exceptions import TelegramBadRequest
 from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
@@ -157,6 +158,15 @@ class Checkout(StatesGroup):
 router = Router()
 
 
+async def safe_edit(cb: CallbackQuery, text: str, reply_markup=None) -> None:
+    """edit_text that swallows 'message is not modified' when the user taps the same button twice."""
+    try:
+        await cb.message.edit_text(text, reply_markup=reply_markup)
+    except TelegramBadRequest as e:
+        if "message is not modified" not in str(e):
+            raise
+
+
 @router.message(Command("start"))
 async def cmd_start(msg: Message, state: FSMContext) -> None:
     await state.clear()
@@ -174,7 +184,7 @@ async def show_categories(msg: Message) -> None:
 @router.callback_query(F.data.startswith("cat:"))
 async def show_category(cb: CallbackQuery) -> None:
     category = cb.data.split(":", 1)[1]
-    await cb.message.edit_text(f"<b>{category.title()}</b>", reply_markup=products_kb(category))
+    await safe_edit(cb, f"<b>{category.title()}</b>", reply_markup=products_kb(category))
     await cb.answer()
 
 
@@ -185,7 +195,8 @@ async def show_product(cb: CallbackQuery) -> None:
     if not p:
         await cb.answer("Not available.", show_alert=True)
         return
-    await cb.message.edit_text(
+    await safe_edit(
+        cb,
         f"<b>{p.name}</b>\n{p.description}\n\n<b>{CURRENCY}{p.price:.2f}</b>",
         reply_markup=product_kb(pid),
     )
@@ -194,14 +205,14 @@ async def show_product(cb: CallbackQuery) -> None:
 
 @router.callback_query(F.data == "back:cats")
 async def back_to_cats(cb: CallbackQuery) -> None:
-    await cb.message.edit_text("<b>Categories</b>", reply_markup=categories_kb())
+    await safe_edit(cb, "<b>Categories</b>", reply_markup=categories_kb())
     await cb.answer()
 
 
 @router.callback_query(F.data.startswith("back:cat:"))
 async def back_to_category(cb: CallbackQuery) -> None:
     category = cb.data.split(":", 2)[2]
-    await cb.message.edit_text(f"<b>{category.title()}</b>", reply_markup=products_kb(category))
+    await safe_edit(cb, f"<b>{category.title()}</b>", reply_markup=products_kb(category))
     await cb.answer()
 
 
