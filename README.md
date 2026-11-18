@@ -1,12 +1,15 @@
-# Telegram Order Bot — LITE
+# Telegram Order Bot — LITE (Python, aiogram 3)
 
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![aiogram](https://img.shields.io/badge/aiogram-3.4-blue.svg)](https://docs.aiogram.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-A single-file Telegram bot that walks a customer from catalog → cart → checkout, in modern Python (`aiogram 3`).
+An open-source Telegram ecommerce bot template that walks a customer from product catalog → cart → FSM checkout, in modern Python (`aiogram 3`). Built for small shops, Fiverr templates, and anyone who wants a readable starting point for a production order bot.
 
 Free, MIT, hack away.
+
+**Live demo:** [@quickorder_myshop_bot](https://t.me/quickorder_myshop_bot) — `/start`
+**Write-up / architecture notes:** [Hashnode article](https://shippingpython.hashnode.dev/how-i-packaged-6-fiverr-telegram-bot-gigs-into-one-aiogram-3-template)
 
 ---
 
@@ -22,7 +25,7 @@ That's the whole thing. One file, ~250 lines, readable in 10 minutes.
 ## Run it
 
 ```bash
-git clone https://github.com/YOUR_USER/telegram-order-bot-lite
+git clone https://github.com/daillyteen3056-rgb/telegram-order-bot-lite
 cd telegram-order-bot-lite
 cp .env.example .env     # add your BOT_TOKEN
 pip install -r requirements.txt
@@ -69,7 +72,7 @@ This LITE version is deliberately minimal. If you need any of these, the full ve
 | Developer license (resell client bots) | ❌ | ✅ (Developer tier) |
 | Email support | ❌ | ✅ |
 
-**Full version:** $9 launch (going to $29 on Dec 1) → [FULL_VERSION_URL]
+**Full version:** $9 launch (going to $29 on Dec 1) → [daillyteen.gumroad.com/l/telegram-order-bot](https://daillyteen.gumroad.com/l/telegram-order-bot)
 
 If LITE is enough for you, use it. No guilt. If you're deploying for a real shop or reselling on Fiverr, the full version saves hours and gives you a license to use it in client work.
 
