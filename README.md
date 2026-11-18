@@ -72,7 +72,7 @@ This LITE version is deliberately minimal. If you need any of these, the full ve
 | Developer license (resell client bots) | ❌ | ✅ (Developer tier) |
 | Email support | ❌ | ✅ |
 
-**Full version:** $9 launch (going to $29 on Dec 1) → [daillyteen.gumroad.com/l/telegram-order-bot](https://daillyteen.gumroad.com/l/telegram-order-bot)
+**Full version:** $9 launch (going to $29 on Dec 1) → [daillyteen.gumroad.com/l/telegram-order-bot](https://daillyteen.gumroad.com/l/telegram-order-bot?utm_source=github&utm_medium=readme&utm_campaign=lite_readme)
 
 If LITE is enough for you, use it. No guilt. If you're deploying for a real shop or reselling on Fiverr, the full version saves hours and gives you a license to use it in client work.
 
@@ -97,7 +97,7 @@ Yes. Edit `products.json`, add your `BOT_TOKEN`, run `python bot.py`. You own th
 LITE runs on long-polling only — works on any host that keeps a Python process alive. For a one-click Railway config + Volume mounting + webhook mode, see the full version. There's also a [write-up on the 3 Railway traps](https://shippingpython.hashnode.dev/deploying-a-telegram-bot-to-railway-in-2026-the-3-traps-nobody-mentions) that will save you half a day.
 
 **Does it handle payments?**
-Not in LITE. The checkout collects name/phone/address and prints a fake order ID. For order collection + admin alerts + Google Sheets logging, grab the [full version on Gumroad](https://daillyteen.gumroad.com/l/telegram-order-bot). Stripe + Telegram native Payments ship in v1.1 (Q1 2027), free for buyers.
+Not in LITE. The checkout collects name/phone/address and prints a fake order ID. For order collection + admin alerts + Google Sheets logging, grab the [full version on Gumroad](https://daillyteen.gumroad.com/l/telegram-order-bot?utm_source=github&utm_medium=readme&utm_campaign=lite_readme_faq). Stripe + Telegram native Payments ship in v1.1 (Q1 2027), free for buyers.
 
 **Why aiogram 3 instead of `python-telegram-bot` / `pyTelegramBotAPI`?**
 Tried all three. aiogram 3's router pattern + native FSM felt the cleanest for multi-handler apps. If you're already on `python-telegram-bot v20+`, no reason to switch — both are production-ready.
