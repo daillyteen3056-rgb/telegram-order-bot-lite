@@ -85,3 +85,34 @@ MIT. Fork it, ship it, charge money with it, whatever. Credit appreciated but no
 ## Contributing
 
 Issues + PRs welcome. Scope rule: PRs must stay within what LITE does (catalog/cart/checkout). Admin notifications, Sheets, deploy configs — those live in the full version. Keeps both codebases simple.
+
+---
+
+## FAQ
+
+**Is this a Telegram shop bot I can use for my own store?**
+Yes. Edit `products.json`, add your `BOT_TOKEN`, run `python bot.py`. You own the code.
+
+**Can I deploy this to Railway / Render / Fly?**
+LITE runs on long-polling only — works on any host that keeps a Python process alive. For a one-click Railway config + Volume mounting + webhook mode, see the full version. There's also a [write-up on the 3 Railway traps](https://shippingpython.hashnode.dev/deploying-a-telegram-bot-to-railway-in-2026-the-3-traps-nobody-mentions) that will save you half a day.
+
+**Does it handle payments?**
+Not in LITE. The checkout collects name/phone/address and prints a fake order ID. For order collection + admin alerts + Google Sheets logging, grab the [full version on Gumroad](https://daillyteen.gumroad.com/l/telegram-order-bot). Stripe + Telegram native Payments ship in v1.1 (Q1 2027), free for buyers.
+
+**Why aiogram 3 instead of `python-telegram-bot` / `pyTelegramBotAPI`?**
+Tried all three. aiogram 3's router pattern + native FSM felt the cleanest for multi-handler apps. If you're already on `python-telegram-bot v20+`, no reason to switch — both are production-ready.
+
+**Can I resell bots I build from this?**
+LITE is MIT. Fork, extend, ship it — including client work. Full version has a Developer tier if you prefer a license for commercial resale with a formal grant.
+
+**What Python version?**
+3.10+. Pin 3.12 if you want to avoid [the Python 3.13 pydantic-core trap on Railway](https://shippingpython.hashnode.dev/deploying-a-telegram-bot-to-railway-in-2026-the-3-traps-nobody-mentions).
+
+**How does this compare to no-code bot builders (BotFather alone, ManyBot, Chatfuel)?**
+Those are faster for toy flows. This is faster the moment you want custom logic — real order parsing, per-user state, integration with an API or a database. If you'd write Python anyway, this skips the boilerplate.
+
+---
+
+## Keywords (SEO, you can ignore)
+
+telegram order bot · python telegram bot template · aiogram 3 example · telegram ecommerce bot · telegram shop bot · aiogram checkout FSM · telegram bot python open source · MIT telegram bot template
