@@ -10,7 +10,7 @@ A tiny, readable **Telegram shop bot** in modern Python (`aiogram 3`): product c
 > ⭐ **If this saves you an afternoon, star it** — it helps other devs find the repo on `topic:aiogram-3`.
 
 **Live demo bot:** [@quickorder_myshop_bot](https://t.me/quickorder_myshop_bot) — send `/start`
-**Landing page:** [telegramorder-bot.netlify.app](https://telegramorder-bot.netlify.app/?utm_source=github&utm_medium=readme&utm_campaign=lite_homepage)
+**Landing page:** [telegramorder-bot.pages.dev](https://telegramorder-bot.pages.dev/?utm_source=github&utm_medium=readme&utm_campaign=lite_homepage)
 **Architecture write-up:** [Hashnode article](https://shippingpython.hashnode.dev/how-i-packaged-6-fiverr-telegram-bot-gigs-into-one-aiogram-3-template)
 
 ---
